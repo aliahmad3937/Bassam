@@ -1,0 +1,163 @@
+package com.cc.bassam.models
+
+import com.google.gson.annotations.SerializedName
+
+data class MemberDetail(
+    @SerializedName("Exceptions" ) var Exceptions : String? = null,
+    @SerializedName("Status"     ) var Status     : Int?    = null,
+    @SerializedName("ResultType" ) var ResultType : Int?    = null,
+    @SerializedName("Message"    ) var Message    : String? = null,
+    @SerializedName("Data"       ) var Data       : Detail?   = Detail()
+){
+
+
+    data class Children (
+        @SerializedName("id"                     ) var id                   : Int?              = null,
+        @SerializedName("parent_id"              ) var parentId             : String?           = null,
+        @SerializedName("nodeID"                 ) var nodeID               : String?           = null,
+        @SerializedName("gender"                 ) var gender               : String?           = null,
+        @SerializedName("name"                   ) var name                 : String?           = null,
+        @SerializedName("credentials_issued"     ) var credentialsIssued    : String?           = null,
+        @SerializedName("credentials_revoked"    ) var credentialsRevoked   : String?           = null,
+        @SerializedName("country"                ) var country              : String?           = null,
+        @SerializedName("city"                   ) var city                 : String?           = null,
+        @SerializedName("dob"                    ) var dob                  : String?           = null,
+        @SerializedName("dob_calendar_type"      ) var dobCalendarType      : String?           = null,
+        @SerializedName("profile_picture_square" ) var profilePictureSquare : String?           = null,
+        @SerializedName("profile_picture_circle" ) var profilePictureCircle : String?           = null,
+        @SerializedName("mother_name"            ) var motherName           : String?           = null,
+        @SerializedName("m_father_name"          ) var mFatherName          : String?           = null,
+        @SerializedName("m_grand_father_name"    ) var mGrandFatherName     : String?           = null,
+        @SerializedName("p_mother_info"          ) var pMotherInfo          : String?           = null,
+        @SerializedName("p_wife_info"            ) var pWifeInfo            : String?           = null,
+        @SerializedName("p_dob"                  ) var pDob                 : String?           = null,
+        @SerializedName("p_location"             ) var pLocation            : String?           = null,
+        @SerializedName("p_email"                ) var pEmail               : String?           = null,
+        @SerializedName("p_mobile"               ) var pMobile              : String?           = null,
+        @SerializedName("p_landline"             ) var pLandline            : String?           = null,
+        @SerializedName("p_socialnetworks"       ) var pSocialnetworks      : String?           = null,
+        @SerializedName("p_workplace"            ) var pWorkplace           : String?           = null,
+        @SerializedName("p_education"            ) var pEducation           : String?           = null,
+        @SerializedName("p_profile_picture"      ) var pProfilePicture      : String?           = null,
+        @SerializedName("alive"                  ) var alive                : String?           = null,
+        @SerializedName("sequence"               ) var sequence             : String?           = null,
+        @SerializedName("education"              ) var education            : ArrayList<Education> = arrayListOf()
+
+    )
+    data class Siblings (
+        @SerializedName("id"                     ) var id                   : Int?    = null,
+        @SerializedName("parent_id"              ) var parentId             : String? = null,
+        @SerializedName("nodeID"                 ) var nodeID               : String? = null,
+        @SerializedName("gender"                 ) var gender               : String? = null,
+        @SerializedName("name"                   ) var name                 : String? = null,
+        @SerializedName("credentials_issued"     ) var credentialsIssued    : String? = null,
+        @SerializedName("credentials_revoked"    ) var credentialsRevoked   : String? = null,
+        @SerializedName("country"                ) var country              : String? = null,
+        @SerializedName("city"                   ) var city                 : String? = null,
+        @SerializedName("dob"                    ) var dob                  : String? = null,
+        @SerializedName("dob_calendar_type"      ) var dobCalendarType      : String? = null,
+        @SerializedName("profile_picture_square" ) var profilePictureSquare : String? = null,
+        @SerializedName("profile_picture_circle" ) var profilePictureCircle : String? = null,
+        @SerializedName("p_profile_picture"      ) var pProfilePicture      : String? = null,
+        @SerializedName("p_dob"                  ) var pDob                 : String? = null,
+        @SerializedName("p_mother_info"          ) var pMotherInfo          : String? = null,
+        @SerializedName("contact"                ) var contact              : String? = null,
+        @SerializedName("contact_extension"      ) var contactExtension     : String? = null,
+        @SerializedName("mobile"                 ) var mobile               : String? = null,
+        @SerializedName("email"                  ) var email                : String? = null,
+        @SerializedName("p_email"                ) var pEmail               : String? = null,
+        @SerializedName("sequence"               ) var sequence             : String? = null,
+        @SerializedName("mother_name"            ) var motherName           : String? = null,
+        @SerializedName("m_father_name"          ) var mFatherName          : String? = null,
+        @SerializedName("m_grand_father_name"    ) var mGrandFatherName     : String? = null,
+        @SerializedName("branch"                 ) var branch               : String? = null
+
+    )
+    data class Workplaces (
+        @SerializedName("id"        ) var id       : Int?    = null,
+        @SerializedName("job_title" ) var jobTitle : String? = null,
+        @SerializedName("location"  ) var location : String? = null
+
+    )
+    data class Education (
+        @SerializedName("id"            ) var id           : Int?    = null,
+        @SerializedName("level"         ) var level        : String? = null,
+        @SerializedName("level_arabic"  ) var levelArabic  : String? = null,
+        @SerializedName("institute"     ) var institute    : String? = null,
+        @SerializedName("year"          ) var year         : String? = null,
+        @SerializedName("program_title" ) var programTitle : String? = null
+
+    )
+
+    data class Detail (
+        @SerializedName("id"                      ) var id                   : Int?                  = null,
+        @SerializedName("parent_id"               ) var parentId             : String?               = null,
+        @SerializedName("nodeID"                  ) var nodeID               : String?               = null,
+        @SerializedName("gender"                  ) var gender               : String?               = null,
+        @SerializedName("name"                    ) var name                 : String?               = null,
+        @SerializedName("credentials_issued"      ) var credentialsIssued    : String?               = null,
+        @SerializedName("credentials_revoked"     ) var credentialsRevoked   : String?               = null,
+        @SerializedName("country"                 ) var country              : String?               = null,
+        @SerializedName("city"                    ) var city                 : String?               = null,
+        @SerializedName("dob"                     ) var dob                  : String?               = null,
+        @SerializedName("dob_calendar_type"       ) var dobCalendarType      : String?               = null,
+        @SerializedName("profile_picture_square"  ) var profilePictureSquare : String?               = null,
+        @SerializedName("profile_picture_circle"  ) var profilePictureCircle : String?               = null,
+        @SerializedName("p_profile_picture"       ) var pProfilePicture      : String?               = null,
+        @SerializedName("p_dob"                   ) var pDob                 : String?               = null,
+        @SerializedName("p_mother_info"           ) var pMotherInfo          : String?               = null,
+        @SerializedName("contact"                 ) var contact              : String?               = null,
+        @SerializedName("contact_extension"       ) var contactExtension     : String?               = null,
+        @SerializedName("mobile"                  ) var mobile               : String?               = null,
+        @SerializedName("email"                   ) var email                : String?               = null,
+        @SerializedName("p_email"                 ) var pEmail               : String?               = null,
+        @SerializedName("sequence"                ) var sequence             : String?               = null,
+        @SerializedName("mother_name"             ) var motherName           : String?               = null,
+        @SerializedName("m_father_name"           ) var mFatherName          : String?               = null,
+        @SerializedName("m_grand_father_name"     ) var mGrandFatherName     : String?               = null,
+        @SerializedName("branch"                  ) var branch               : String?               = null,
+        @SerializedName("full_name"               ) var fullName             : String?               = null,
+        @SerializedName("father_name"             ) var fatherName           : String?               = null,
+        @SerializedName("grand_father_name"       ) var grandFatherName      : String?               = null,
+        @SerializedName("g_grand_father_name"     ) var gGrandFatherName     : String?               = null,
+        @SerializedName("next_g_grand_father_one" ) var nextGGrandFatherOne  : String?               = null,
+        @SerializedName("next_g_grand_father_two" ) var nextGGrandFatherTwo  : String?               = null,
+        @SerializedName("mother_full_name"        ) var motherFullName       : String?               = null,
+        @SerializedName("scholar"                 ) var scholar              : String?               = null,
+        @SerializedName("judge"                   ) var judge                : String?               = null,
+        @SerializedName("poet"                    ) var poet                 : String?               = null,
+        @SerializedName("scientist"               ) var scientist            : String?               = null,
+        @SerializedName("governer"                ) var governer             : String?               = null,
+        @SerializedName("ref_id"                  ) var refId                : String?               = null,
+        @SerializedName("status"                  ) var status               : String?               = null,
+        @SerializedName("alive"                   ) var alive                : String?               = null,
+        @SerializedName("generation"              ) var generation           : String?               = null,
+        @SerializedName("in_family_committee"     ) var inFamilyCommittee    : String?               = null,
+        @SerializedName("is_celebrity"            ) var isCelebrity          : String?               = null,
+        @SerializedName("is_locked"               ) var isLocked             : String?               = null,
+        @SerializedName("is_disabled"             ) var isDisabled           : String?               = null,
+        @SerializedName("is_worthy"               ) var isWorthy             : String?               = null,
+        @SerializedName("brief_description"       ) var briefDescription     : String?               = null,
+        @SerializedName("wife_name"               ) var wifeName             : String?               = null,
+        @SerializedName("w_father_name"           ) var wFatherName          : String?               = null,
+        @SerializedName("w_grand_father_name"     ) var wGrandFatherName     : String?               = null,
+        @SerializedName("username"                ) var username             : String?               = null,
+        @SerializedName("twitter"                 ) var twitter              : String?               = null,
+        @SerializedName("instagram"               ) var instagram            : String?               = null,
+        @SerializedName("snapchat"                ) var snapchat             : String?               = null,
+        @SerializedName("commitee_designation"    ) var commiteeDesignation  : String?               = null,
+        @SerializedName("commitee_name"           ) var commiteeName         : String?               = null,
+        @SerializedName("children"                ) var children             : ArrayList<Children>   = arrayListOf(),
+        @SerializedName("siblings"                ) var siblings             : ArrayList<Siblings>   = arrayListOf(),
+        @SerializedName("workplaces"              ) var workplaces           : ArrayList<Workplaces> = arrayListOf(),
+        @SerializedName("p_wife_info"             ) var pWifeInfo            : String?               = null,
+        @SerializedName("p_location"              ) var pLocation            : String?               = null,
+        @SerializedName("p_mobile"                ) var pMobile              : String?               = null,
+        @SerializedName("p_landline"              ) var pLandline            : String?               = null,
+        @SerializedName("p_socialnetworks"        ) var pSocialnetworks      : String?               = null,
+        @SerializedName("p_workplace"             ) var pWorkplace           : String?               = null,
+        @SerializedName("p_education"             ) var pEducation           : String?               = null,
+        @SerializedName("education"               ) var education            : ArrayList<Education>  = arrayListOf()
+
+    )
+}

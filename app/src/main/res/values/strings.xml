@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">البسام</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">عبدالعزيز محمد سليمان محمد</string>
+    <string name="hint">إبحث عن عنوان خبر أو جزء منه</string>
+    <string name="wifi_not_connected_try_later">Wifi not Connected <u><font color="#AD2641">try later!</font></u></string>
+    <string name="no_data_found">No Data Found!</string>
+    <string name="v2">v2</string>
+    <string name="todo">TODO</string>
+</resources>
